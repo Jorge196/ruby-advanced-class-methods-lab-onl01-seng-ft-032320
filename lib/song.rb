@@ -40,8 +40,8 @@ class Song
       result
     else
       self.create_by_name(title)
-    end
   end
+
 
   def self.alphabetical
     sorted = self.all.sort_by {|song| song.name}
@@ -68,7 +68,7 @@ class Song
   def self.destroy_all
     self.all.clear
   end
-end 
+end
 
 
 
