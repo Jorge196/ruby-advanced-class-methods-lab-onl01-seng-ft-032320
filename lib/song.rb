@@ -7,7 +7,7 @@ class Song
   end
 
   def save
-    self.class.all << self
+    @@all << self
   end
 
   def self.create
@@ -61,7 +61,7 @@ class Song
     song.artist_name = filename[0]
     song.name = filename[1]
 
-    song 
+    song
   end
 
   def self.destroy_all
