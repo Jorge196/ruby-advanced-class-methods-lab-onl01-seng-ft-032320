@@ -6,6 +6,10 @@ class Song
     @@all
   end
 
+  def save
+    self.class.all << self
+  end
+
   def self.create
     song = self.create
     self.all << song
@@ -47,10 +51,19 @@ class Song
   def self.new_from_filename(filename)
     @@all = filename.split(" - ")
     @@all[1] = @@all[1].chomp(".mp3")
-    
-
-  def save
-    self.class.all << self
+    song = self.new
+    song.name = @@all[1]
+    song.artist_name = @@all[0]
+    song
   end
+
+  def self.create_from_filename(filename)
+    result = self.new_from_filename
+    song = self.create
+    song.name = result.name
+    song.artist
+
+
+
 
 end
