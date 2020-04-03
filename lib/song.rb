@@ -22,19 +22,22 @@ class Song
   end
 
   def self.create_by_name(name)
-    song 
+    song = self.new
+    song.name = name
+    song
   end
 
   def self.find_by_name
-
+    @@all.find_by_name{|x|x.name == name}
   end
 
   def self.find_or_create_by_name
-
+    self.find_by_name(name) || self.create_by_name
   end
 
 
   def self.alphabetical
+    
 
   end
 
