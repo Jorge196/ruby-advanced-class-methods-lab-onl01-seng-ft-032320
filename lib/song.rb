@@ -19,7 +19,11 @@ class Song
 
   def self.create_by_name
     song = self.create_by_name
-    
+    song.name = title
+    song
+  end
+
+  
 
 
   def save
