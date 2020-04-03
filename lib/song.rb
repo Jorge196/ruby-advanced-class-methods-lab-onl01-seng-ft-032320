@@ -17,7 +17,7 @@ class Song
     song.name = title
   end
 
-  def
+  def self.
 
 
   def save
