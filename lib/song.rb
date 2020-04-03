@@ -37,8 +37,10 @@ class Song
     else
       self.create_by_name(title)
     end
-  end 
+  end
 
+  def self.alphabetical
+    sorted = self.all
 
 
   def save
