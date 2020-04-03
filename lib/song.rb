@@ -28,7 +28,7 @@ class Song
   end
 
   def self.find_by_name
-    @@all.find_by_name{|x|x.name == name}
+    @@all.find_by_name{|song|song.name == name}
   end
 
   def self.find_or_create_by_name
@@ -37,7 +37,7 @@ class Song
 
 
   def self.alphabetical()
-    @@all.sort_by{|x|x.name}
+    @@all.sort_by{|song|song.name}
 
   end
 
@@ -54,7 +54,7 @@ class Song
     song.name = (name.split(" - ")[1].chomp(".mp3"))
     song.artist_name = (name.split(" - ")[0])
     @@all << song
-    song 
+    song
   end
 
   def self.destroy_all
