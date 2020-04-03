@@ -17,7 +17,9 @@ class Song
     song.name = title
   end
 
-  def self.
+  def self.create_by_name
+    song = self.create_by_name
+    
 
 
   def save
